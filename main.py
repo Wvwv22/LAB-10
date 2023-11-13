@@ -17,5 +17,5 @@ async def multiply(x: float, y: float):
 @app.post("/calc/divide")
 async def divide(x: float, y: float):
     if y == 0:
-        raise HTTPException(status_code=400, detail="не может делить на ноль")
+        raise HTTPException(status_code=400, detail="Cannot divided by zero")
     return {"result": x / y}
